@@ -1,19 +1,19 @@
 "use client";
 
 import { Component } from "react";
-import { TreeCanvas } from "butterfly-dag";
 import mockData from "./data";
 
 import "butterfly-dag/dist/index.css";
 import "./index.scss";
+import { AutoLayoutFixedTreeCanvas } from "../auto-layout-fixed-tree-canvas";
 
 export class MindMap extends Component {
-	canvas!: TreeCanvas;
+	canvas!: AutoLayoutFixedTreeCanvas;
 
 	componentDidMount() {
 		let root = document.getElementById("dag-canvas");
 
-		this.canvas = new TreeCanvas({
+		this.canvas = new AutoLayoutFixedTreeCanvas({
 			root: root,
 			disLinkable: true, // 可删除连线
 			linkable: true, // 可连线
