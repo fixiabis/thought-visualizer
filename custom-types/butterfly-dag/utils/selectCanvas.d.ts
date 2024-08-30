@@ -1,0 +1,33 @@
+export default SelectCanvas;
+declare class SelectCanvas {
+    dom: HTMLElement;
+    cxt: any;
+    canvasTop: number;
+    canvasLeft: number;
+    canvasHeight: number;
+    canvasWidth: number;
+    canScrollX: number;
+    canScrollY: number;
+    startX: number;
+    startY: number;
+    endX: number;
+    endY: number;
+    _on: any;
+    _emit: any;
+    isDraw: boolean;
+    root: any;
+    isActive: boolean;
+    init(opts: any): void;
+    resize(opts?: {}): void;
+    addEventListener(): void;
+    mouseDown(evt: any): void;
+    mouseUp(evt: any): void;
+    mouseMove(evt: any): void;
+    mouseLeave(evt: any): void;
+    drawRect(): void;
+    clearCanvas(): void;
+    getCanvas(): HTMLElement;
+    active(): void;
+    unActive(): void;
+    _changeCanvasInfo(data: any): void;
+}
